@@ -22,3 +22,13 @@ the model I use with Scala is `AnimalOuterClass.Animal`.
 ## Some command lines 
 - To see the available subjects in the Schema Registry, you can use : `curl http://localhost:8081/subjects`
 - To see the details about the schema, you can use `curl http://localhost:8081/subjects/{{yourSchemaReturnedByThePreviousCall}}/versions/1` (change the version if you have made an evolution)
+You have a return like this : 
+```
+{
+    subject: "animal-topic-value",
+    version: 1,
+    id: 1,
+    schemaType: "PROTOBUF",
+    schema: "syntax = "proto3"; message Dog { int32 paws = 1; } message Bird { int32 wings = 1; } message Animal { string name = 1; int32 age = 2; oneof animal { .Dog dog = 3; .Bird bird = 4; } } "
+}
+```
