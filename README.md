@@ -20,5 +20,5 @@ the model I use with Scala is `AnimalOuterClass.Animal`.
 - Run the producer. You can change the name of the animal to see the difference between the records in the topic.  
 
 ## Some command lines 
-- To see the available subjects in the Schema Registry, you can use : `http://localhost:8081/subjects`
-- To see the details about the schema, you can use `http://localhost:8081/subjects/{{yourSchemaReturnedByThePreviousCall}}/versions/1` (change the version if you have made an evolution)
+- To see the available subjects in the Schema Registry, you can use : `curl http://localhost:8081/subjects`
+- To see the details about the schema, you can use `curl http://localhost:8081/subjects/{{yourSchemaReturnedByThePreviousCall}}/versions/1` (change the version if you have made an evolution)
