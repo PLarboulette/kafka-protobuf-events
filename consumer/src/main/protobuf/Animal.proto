@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message Dog {
+  int32 paws = 1;
+}
+
+message Bird {
+  int32 wings = 1;
+}
+
+message Animal {
+  string name = 1;
+  int32 age = 2;
+
+  oneof animal {
+    Dog dog = 3;
+    Bird bird = 4;
+  }
+}
